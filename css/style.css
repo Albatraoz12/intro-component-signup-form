@@ -85,6 +85,25 @@ label {
   outline-color: var(--dark-blue);
 }
 
+.btn {
+  padding: 1rem;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  cursor: pointer;
+  background-color: hsl(154deg 59% 51% / 90%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
