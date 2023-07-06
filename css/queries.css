@@ -1,4 +1,7 @@
 @media screen and (min-width: 1000px) {
+  body {
+    background-image: url('/images/bg-intro-desktop.png') !important;
+  }
   .container {
     display: flex;
     justify-content: center;
