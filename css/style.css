@@ -33,6 +33,17 @@ body {
   margin: 5rem auto;
 }
 
+.intro-container {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
