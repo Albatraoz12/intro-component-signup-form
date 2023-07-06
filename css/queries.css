@@ -1,0 +1,29 @@
+@media screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 80vh;
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start !important;
+    width: 580px;
+  }
+
+  .intro-container h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .form-container {
+    align-items: stretch !important;
+  }
+
+  form {
+    padding: 2.5rem !important;
+  }
+}
