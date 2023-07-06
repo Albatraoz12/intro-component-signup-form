@@ -23,6 +23,16 @@
   --grayish-blue: hsl(246, 25%, 77%);
 }
 
+body {
+  background-image: url('/images/bg-intro-mobile.png');
+  background-color: var(--red);
+}
+
+.container {
+  max-width: 90vw;
+  margin: 5rem auto;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
