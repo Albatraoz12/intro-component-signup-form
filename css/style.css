@@ -30,7 +30,7 @@ body {
 
 .container {
   max-width: 90vw;
-  margin: 5rem auto;
+  margin: 4.5rem auto;
 }
 
 .intro-container {
@@ -102,6 +102,18 @@ label {
 .btn:active {
   cursor: pointer;
   background-color: hsl(154deg 59% 51% / 90%);
+}
+
+.warning-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--grayish-blue);
+  text-align: center;
+  padding-inline: 1rem;
+}
+
+.warning-highlight {
+  color: var(--red);
 }
 
 .attribution {
