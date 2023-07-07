@@ -17,6 +17,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js" defer></script>
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
@@ -35,40 +36,54 @@
             <div class="banner">
               <p><strong>Try it free 7 days </strong>then $20/mo. thereafter</p>
             </div>
-            <form>
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                placeholder="First Name"
-                name="fname"
-                id="fname"
-                class="form-input"
-              />
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                placeholder="Last Name"
-                name="lname"
-                id="lname"
-                class="form-input"
-              />
-              <label for="email">Email</label>
-              <input
-                type="email"
-                placeholder="email@gmail.com"
-                name="email"
-                id="email"
-                class="form-input"
-              />
-              <label for="password">Password</label>
-              <input
-                type="text"
-                placeholder="Your password"
-                name="password"
-                id="password"
-                class="form-input"
-              />
-              <button type="submit" class="btn">Claim your free trial</button>
+            <form id="signup-form">
+              <div class="input-group">
+                <label for="fname">First Name</label>
+                <i class="error-icon"></i>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  name="fname"
+                  id="fname"
+                  class="form-input"
+                />
+              </div>
+              <div class="input-group">
+                <label for="lname">Last Name</label>
+                <i class="error-icon"></i>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="lname"
+                  id="lname"
+                  class="form-input"
+                />
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <i class="error-icon"></i>
+                <input
+                  type="email"
+                  placeholder="email@gmail.com"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                />
+              </div>
+              <div class="input-group">
+                <label for="password">Password</label>
+                <i class="error-icon"></i>
+                <input
+                  type="password"
+                  placeholder="Your password"
+                  name="password"
+                  id="password"
+                  class="form-input"
+                />
+              </div>
+              <button type="button" id="btn" class="btn">
+                Claim your free trial
+              </button>
               <p class="warning-text">
                 By clicking the button, you are agreeing to our
                 <span class="warning-highlight">Terms and Services</span>
