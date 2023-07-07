@@ -34,10 +34,24 @@ document.getElementById('btn').addEventListener('click', function (event) {
   }
 
   if (isValid) {
-    // Form is valid, you can submit it or perform any additional actions here
     console.log('Form submitted successfully!');
+    resetFormFields();
   }
 });
+
+function resetFormFields() {
+  var formInputs = document.getElementsByClassName('form-input');
+
+  Array.from(formInputs).forEach(function (formInput) {
+    formInput.classList.remove('invalid');
+    formInput.value = '';
+    var errorIcon = formInput.previousElementSibling;
+
+    if (errorIcon.classList.contains('error-icon')) {
+      errorIcon.style.display = 'none';
+    }
+  });
+}
 
 function resetFieldStyles() {
   var formInputs = document.getElementsByClassName('form-input');
@@ -62,8 +76,6 @@ function markFieldAsInvalid(field) {
 }
 
 function isValidEmail(email) {
-  // You can implement your own email validation logic here
-  // This is a basic email validation example
   var emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
 }
