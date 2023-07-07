@@ -1,3 +1,4 @@
+// Add event listener to the button
 document.getElementById('btn').addEventListener('click', function (event) {
   event.preventDefault(); // Prevent the form from submitting
   console.log('click');
@@ -12,22 +13,22 @@ document.getElementById('btn').addEventListener('click', function (event) {
   var password = document.getElementById('password');
   var isValid = true;
 
-  if (fname.value.trim() === '') {
+  if (isEmpty(fname.value)) {
     isValid = false;
     markFieldAsInvalid(fname);
   }
 
-  if (lname.value.trim() === '') {
+  if (isEmpty(lname.value)) {
     isValid = false;
     markFieldAsInvalid(lname);
   }
 
-  if (email.value.trim() === '' || !isValidEmail(email.value)) {
+  if (isEmpty(email.value) || !isValidEmail(email.value)) {
     isValid = false;
     markFieldAsInvalid(email);
   }
 
-  if (password.value.trim() === '') {
+  if (isEmpty(password.value)) {
     isValid = false;
     markFieldAsInvalid(password);
   }
@@ -41,19 +42,20 @@ document.getElementById('btn').addEventListener('click', function (event) {
 function resetFieldStyles() {
   var formInputs = document.getElementsByClassName('form-input');
 
-  for (var i = 0; i < formInputs.length; i++) {
-    var formInput = formInputs[i];
+  Array.from(formInputs).forEach(function (formInput) {
     formInput.classList.remove('invalid');
     var errorIcon = formInput.previousElementSibling;
+
     if (errorIcon.classList.contains('error-icon')) {
       errorIcon.style.display = 'none';
     }
-  }
+  });
 }
 
 function markFieldAsInvalid(field) {
   field.classList.add('invalid');
   var errorIcon = field.previousElementSibling;
+
   if (errorIcon.classList.contains('error-icon')) {
     errorIcon.style.display = 'inline-block';
   }
@@ -64,4 +66,8 @@ function isValidEmail(email) {
   // This is a basic email validation example
   var emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
+}
+
+function isEmpty(value) {
+  return value.trim() === '';
 }
